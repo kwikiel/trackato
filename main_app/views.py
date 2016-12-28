@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-		return HttpResponse("<h1>Hello Trackato! </h1>")
+		name = 'Usecase metric'
+		value = 1337
+		context = {'treasure_name': name,
+						'treasure_val': value}
+		return render(request, 'index.html', context)
