@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from .models import Treasure
+from .models import User, Transaction
 from django.db.models import Sum
 def index(request):
-		treasures = Treasure.objects.all()
-		total = Treasure.objects.aggregate(Sum('value'))
-		return render(request, 'index.html', {'treasures': treasures, 'total': total})
+		transactions = Transaction.objects.all()
+		return render(request, 'index.html', {'transactions': transactions})

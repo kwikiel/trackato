@@ -2,11 +2,10 @@
 xD templejt
 
 
-{% for treasure in treasures %}
-<p> {{ treasure.name }} </p>
-<p> {{ treasure.value }} </p>
-
-{% endfor %}
+{% for tx in transactions %}
+<p> {{ tx.amount }} </p>
+<b> {{ tx.sender }} </b> =}<p> 
+{{ tx.reciever }} </p>{% endfor %}
 
 
 <b> Total </b>
